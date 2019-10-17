@@ -42,11 +42,24 @@ class CoursesList extends Component {
   render() {
     return (
 
-      <div className="row">
-        <div className="fluid col s12">
-          <h2 className="big-title center">Trending courses</h2>
-        </div>
+      <div className="line">
+          <div className="container">
+            <div className="ruban">
+              <h2 className="title-uppercase-grey center">Courses</h2>
+              <h3 className="subtitle-turquoise center">Which skill do you want to improve today?</h3>
+            </div>
+          </div>
 
+        <div className="container">
+
+          <select class="browser-default">
+            <option value="" disabled selected>Select by category :</option>
+            <option value="1">Coding</option>
+            <option value="2">Art</option>
+            <option value="3">Webmarketing</option>
+          </select>
+        </div>
+        <br />
         <div className="container">
           
           <div className="row">
@@ -55,6 +68,7 @@ class CoursesList extends Component {
               <div className="card hoverable">
                 <div className="card-image">
                   <img className="size-img" src="/img/javascript.jpg"></img>
+                  <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">shopping_cart</i></a>
                 </div>
                 <div className="card-content">
                   <span className="card-title">Javascript in 4 weeks</span>
@@ -74,6 +88,7 @@ class CoursesList extends Component {
               <div className="card hoverable">
                 <div className="card-image">
                   <img className="size-img" src="/img/css3.jpeg"></img>
+                  <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">shopping_cart</i></a>
                 </div>
                 <div className="card-content">
                   <span className="card-title">Dev with style</span>

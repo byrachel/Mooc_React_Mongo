@@ -40,20 +40,20 @@
   background-color: transparent;
 }
 
+a {
+  color: #45B8AC !important;
+}
+
 a:hover {
-    color: #45B8AC;
+    color: #E684C3 !important;
 }
 
 .nav-wrapper {
   background-color: #FFF;
 }
 
-.page-footer {
-  background-color: #45B8AC !important;
-}
-
 .levelup {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
 }
 
@@ -93,18 +93,47 @@ p {
 
 .title-uppercase-grey {
   text-transform: uppercase;
-  font-size: 34px;
-  letter-spacing: 4px;
-  color: silver;
+  font-size: 42px;
+  letter-spacing: 5px;
+  color: #E8E8E8;
   margin: 0;
   padding: 50px 0 0 0;
+  font-weight: 700;
 }
 
 .subtitle-turquoise {
   font-size: 20px;
   color: #45B8AC;
-  padding: 0 0 50px 0;
-  margin: 0;
+  padding: -15px 0 0 0;
+  margin: 0 0 50px 0;
   letter-spacing: 4px;
 }
 
+.green-block {
+  border-top: solid 1px #45B8AC;
+  padding: 10px;
+}
+
+.pink-block {
+  border-top: solid 1px #E684C3;
+  padding: 10px;
+}
+
+.yellow-block {
+  border-top: solid 1px #F7DC69;
+  padding: 10px;
+}
+
+.white-text {
+  color: white;
+  letter-spacing: 3px;
+}
+
+.copyright {
+  padding: 20px 0;
+  background-color: #45B8AC;
+}
+
+footer {
+  margin-bottom: 50px;
+}

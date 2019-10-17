@@ -23,8 +23,11 @@ class User extends Component {
             <div className="row">
                 <div className="col s12">
                     <a href="/" className="modal-close"><MaterialIcon icon="clear" color='#000000' /></a>
+                    <div className="ruban">
+                        <h2 className="title-uppercase-grey center">Welcome</h2>
+                        <h3 className="subtitle-turquoise center">Don't stop learning !</h3>
+                    </div>
                     <form>
-                        <h2 className="modal-title">Sign in:</h2>
                         <div className="input-field col s6">
                             <input id="email-login" type="email" className="validate" />
                             <label for="email-login">Email</label>
@@ -38,6 +41,8 @@ class User extends Component {
                     </form>
                 </div>
             </div>
+            <br />
+            <p className="center"><strong>First time here ?</strong> <a href="http://localhost:3000/CreateAccount/CreateAccount">Create an account.</a></p>
         </div>
     );
   }

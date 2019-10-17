@@ -91,7 +91,7 @@ class App extends Component {
             <header>
               <nav className="z-depth-0">
                 <div className="nav-wrapper">
-                <Link to="/Home/Home"><img Alt="Logo Level.up" src="/img/logo-levelup.png" className="brand-logo"></img></Link>
+                <Link to="/Home/Home"><img Alt="Logo Level.up" src="/img/logo-levelup-2019.png" className="brand-logo"></img></Link>
                   <ul className="right">
                     <li><MaterialIcon icon="search" color='#000000' /></li>
                     <li><Link to="/CoursesList/CoursesList" className="nav-link right-align">Courses</Link></li>
@@ -123,28 +123,41 @@ class App extends Component {
             </Route>
           </Switch>
 
-          <footer className="page-footer">
-            <div className="container">
-              <div className="row">
-                <div className="col l6 s12">
-                  <p className="grey-text text-lighten-4"><span className="levelup">Level.up</span> is a website dedicated to empower people's life. Here, you can learn how to create a business based on your passion.</p>
-                  <p className="small">Image:<a href="https://pixabay.com/fr/users/Pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1867751">Pexels</a> de <a href="https://pixabay.com/fr/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1867751">Pixabay</a></p>
-                </div>
-                <div className="col l4 offset-l2 s12">
-                  <ul>
-                    <li><a className="grey-text text-lighten-3" href="#!"><MaterialIcon icon="school" color='#ffffff' /> Find a course</a></li>
-                    <li><a className="grey-text text-lighten-3" href="#!"><MaterialIcon icon="person" color='#ffffff' /> Create your profil</a></li>
-                    <li><a className="grey-text text-lighten-3" href="#!"><MaterialIcon icon="star" color='#ffffff' /> Discover our free courses.</a></li>
-                  </ul>
-                </div>
-              </div>
+          <footer>
+
+          <div className="container">
+            <div className="ruban">
+              <h2 className="title-uppercase-grey center">About</h2>
+              <h3 className="subtitle-turquoise center">What is Level.up ?</h3>
             </div>
-            <div className="footer-copyright">
-              <div className="container">
-              <p className="grey-text text-lighten-4 center">Made with ReactJS, NodeJS, MongoDB & love. By: Rachel Nething</p>
+
+              <div className="row">
+                <div className="col l4 s12 hoverable">
+                  <p className="center"><MaterialIcon icon="school" color='#45B8AC' size='large' /></p>
+                  <div className="center green-block">
+                    <p>Level.up is dedicated to <span className="levelup">empower people's life</span>, learn how to create a business based on your passion.</p>
+                  </div>
+                </div>
+                <div className="col l4 s12 hoverable">
+                  <p className="center"><MaterialIcon icon="forum" color='#E684C3' size='large' /></p>
+                  <div className="pink-block center">
+                    <p>More than a simple course website. With Level Up you can <span className="levelup">follow and message</span> teachers and students.</p>
+                  </div>
+                </div>
+                <div className="col l4 s12 hoverable">
+                  <p className="center"><MaterialIcon size='large' icon="star" color='#F7DC69' /></p>
+                  <div className="yellow-block center">
+                    <p>Discover our <span className="levelup">high rated courses</span> and our testimonials. We work hard to give you the best experience !</p>
+                  </div>
+                </div>
               </div>
             </div>
           </footer>
+
+          <div className="copyright">
+            <p className="white-text center">Made with ReactJS, NodeJS, MongoDB <MaterialIcon icon="favorite" color='#FFFFFF' /> Rachel Nething</p>
+            <p className="small white-text center">Image:<a href="https://pixabay.com/fr/users/Pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1867751">Pexels</a> Pixabay</p>
+          </div>
 
         </div>
 

@@ -16,3 +16,8 @@
     max-height: 200px;
     width: auto;
 }
+
+.line {
+    border-top: solid 1px silver;
+    margin-top: 50px;
+}

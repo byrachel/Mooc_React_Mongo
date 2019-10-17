@@ -1,5 +1,5 @@
 #cta {
-    background-image: url("/img/level-up.jpg");
+    background-image: url("/img/levelup-homepage.jpg");
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
@@ -10,25 +10,32 @@
   }
   
   .slogan {
-    letter-spacing: 1px;
-    font-size: 35px;
-    color: grey;
+    font-size: 36px;
+    color: #45B8AC;
     margin: 100px 0;
+    letter-spacing: 7px;
   }
 
   .block-slogan {
-    background-color: rgba(255, 255, 255, 0.5);
-    max-width: 320px;
+    background-color: rgba(255, 255, 255, 0.6);
     float: right;
     height: 350px;
   }
 
   .big {
-    font-size: 48px;
+    font-size: 50px;
+    color: black;
+    font-weight: 700;
+    line-height: 50px;
+  }
+
+  .big-turquoise {
+    font-size: 36px;
     text-transform: uppercase;
     color: #45B8AC;
-    letter-spacing: -1;
-    font-weight: 300;
-    margin: 0;
-    padding: 0;
+    font-weight: 700;
+  }
+
+  .ruban {
+    margin: 25px;
   }
