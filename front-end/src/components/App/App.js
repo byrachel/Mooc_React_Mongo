@@ -17,10 +17,12 @@ import {
 
 
 /* Component imports */
-import MyAccount from '../MyAccount/MyAccount';
-import CoursesList from '../CoursesList/CoursesList';
-import User from '../User/User';
+import MyAccount from '../Users/MyAccount/MyAccount';
+import CoursesList from '../Courses/CoursesList/CoursesList';
+import User from '../Users/User/User';
+import CreateAccount from '../Users/CreateAccount/CreateAccount';
 import Home from '../Home/Home';
+
 
 /* App component */
 class App extends Component {
@@ -103,59 +105,6 @@ class App extends Component {
 
           {this._displayModal()}
 
-          <Home />
-
-          <div className="container">
-          
-          <div className="row">
-
-            <div className="col s12 m4">
-              <div className="card-panel teal">
-                <span className="white-text"><strong>Empower your life</strong> with our free and trending courses. Because theory isn't enough, with our method you can practice while learning. What do you want to learn today ? 
-                </span>
-              </div>
-            </div>
-
-            <div className="col s12 m4">
-              <div className="card hoverable">
-                <div className="card-image">
-                  <img className="size-img" src="/img/javascript.jpg"></img>
-                </div>
-                <div className="card-content">
-                  <span className="card-title">Javascript in 4 weeks</span>
-                  <p>With this 4 weeks course, you will how to create a modern and professional website.</p>
-                  <p><strong>#coding</strong></p>
-                </div>
-                <div className="card-action center">
-                  <p>Price: 50$</p>
-                </div>
-                <div className="card-action center">
-                  <a href="#">More information</a>
-                </div>
-              </div>
-            </div>
-
-            <div className="col s12 m4">
-              <div className="card hoverable">
-                <div className="card-image">
-                  <img className="size-img" src="/img/css3.jpeg"></img>
-                </div>
-                <div className="card-content">
-                  <span className="card-title">Dev with style</span>
-                  <p>Learn the most powerful methods to enhance your website.</p>
-                  <p><strong>#coding #webdesign</strong></p>
-                </div>
-                <div className="card-action center">
-                  <p>Free course</p>
-                </div>
-                <div className="card-action center">
-                  <a href="#">More information</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          </div>
 
           {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
@@ -165,6 +114,9 @@ class App extends Component {
             </Route>
             <Route path="/MyAccount/MyAccount">
               <MyAccount />
+            </Route>
+            <Route path="/CreateAccount/CreateAccount">
+              <CreateAccount />
             </Route>
             <Route path="/">
               <Home />

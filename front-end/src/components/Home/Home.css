@@ -5,18 +5,30 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 350px;
-    margin: 30px 0;
+    margin-top: 50px;
+    box-shadow: 4px 5px 5px silver;
   }
   
   .slogan {
-    padding: 25px;
-    background-color: rgba(255, 255, 255, 0.5);
     letter-spacing: 1px;
     font-size: 35px;
-    text-align: center;
+    color: grey;
+    margin: 100px 0;
+  }
+
+  .block-slogan {
+    background-color: rgba(255, 255, 255, 0.5);
     max-width: 320px;
-    display: block;
     float: right;
     height: 350px;
+  }
+
+  .big {
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #45B8AC;
+    letter-spacing: -1;
+    font-weight: 300;
     margin: 0;
+    padding: 0;
   }

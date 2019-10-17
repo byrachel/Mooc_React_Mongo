@@ -49,23 +49,19 @@ mongoose.connection.on('error', () => {
   console.log("Database connection error");
 });
 
-mongoose.connection.once('open', () => {
-    console.log("Connected to database on " + database);
-
-    // Sessions
-    app.use(
+// Sessions
+app.use(
     session({
         secret: 'mydevsecretkey',
         store: new MongoStore({ mongooseConnection: mongoose.connection }),
         resave: false,
         saveUninitialized: false
     })
-    )
+);
 
-    // Passport
-    app.use(passport.initialize());
-    app.use(passport.session()); // calls the deserializeUser
-});
+// Passport
+app.use(passport.initialize());
+app.use(passport.session()); // calls the deserializeUser
 
 /* Routes */
 app.use('/', indexRouter);

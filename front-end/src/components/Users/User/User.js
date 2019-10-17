@@ -6,6 +6,7 @@ import './User.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import MaterialIcon, {colorPalette} from 'material-icons-react';
 
+
 /* App component */
 class User extends Component {
   
@@ -15,8 +16,6 @@ class User extends Component {
 
     }
   }
-
-
 
   render() {
     return (
