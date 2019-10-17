@@ -1,0 +1,101 @@
+/*
+ * App style
+ */
+ @font-face {
+    font-family: "Lato";
+    src: url("/fonts/Lato-Light.ttf");
+    font-weight: 300;
+  }
+ @font-face {
+    font-family: "Lato";
+    src: url("/fonts/Lato-Regular.ttf");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/Lato-Bold.ttf");
+    font-weight: 700;
+  }
+
+  body {
+      font-family: Lato, Tahoma, sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+  }
+
+.brand-logo {
+    width: 200px;
+    height: auto;
+}
+
+.nav-link {
+    padding: 0 10px;
+    margin: 0;
+    font-size: 16px;
+    color: grey;
+    font-family: Lato, Tahoma, sans-serif;
+}
+
+.nav-link:hover {
+  background-color: transparent;
+}
+
+a:hover {
+    color: #45B8AC;
+}
+
+.nav-wrapper {
+  background-color: #FFF;
+}
+
+.page-footer {
+  background-color: #45B8AC !important;
+}
+
+.levelup {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+p {
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+
+
+.big {
+  font-size: 52px;
+  letter-spacing: 4px;
+  color: #45B8AC;
+  font-weight: 700;
+}
+
+.white-text {
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+.small {
+  font-size: 12px;
+}
+
+#mainContainer .modal {
+  display: block;
+  z-index: 10000;
+}
+
+#mainContainer .overlay {
+  content: '';
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #000000AE;
+  z-index: 1;
+}
+
+.teal {
+  color: #45B8AC;
+}
