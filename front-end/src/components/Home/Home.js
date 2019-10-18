@@ -52,7 +52,7 @@ class Home extends Component {
               <div className="card hoverable">
                 <div className="card-image">
                   <img className="size-img" src="/img/javascript.jpg"></img>
-                  <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">shopping_cart</i></a>
+                  <a class="btn-floating btn-large halfway-fab waves-effect waves-light pink"><i class="material-icons">shopping_cart</i></a>
                 </div>
                 <div className="card-content">
                   <span className="card-title">Javascript in 4 weeks</span>
@@ -72,7 +72,7 @@ class Home extends Component {
               <div className="card hoverable">
                 <div className="card-image">
                   <img className="size-img" src="/img/css3.jpeg"></img>
-                  <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">shopping_cart</i></a>
+                  <a class="btn-floating btn-large halfway-fab waves-effect waves-light pink"><i class="material-icons">shopping_cart</i></a>
                 </div>
                 <div className="card-content">
                   <span className="card-title">Dev with style</span>

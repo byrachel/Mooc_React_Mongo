@@ -9,15 +9,15 @@ var newUser = {
     createUser: (req) => {
         var userData = req.body.user;
         var createNewUser = new User ({
-            avatar: userData.avatar,
+            avatar: null,
             firstname: userData.firstname,
             lastname: userData.lastname,
             email: userData.email,
             password: userData.password,
-            status: userData.status,
-            purchases: userData.purchases,
-            courselevel: userData.courselevel,
-            friends: userData.friends
+            status: "guest",
+            purchases: [],
+            courselevel: 0,
+            friends: []
         }
         );
         createNewUser.save();

@@ -8,15 +8,25 @@ var catalog = {
 
     displayProducts: (req,res) => {
 
-    Products.find({}, (error, response) => {
+    Products.find(), (error, data) => {
         if(error) {
-            res.status(500).json([]);
+            res.status(500).json({products: []});
             return;
         }
-        res.json(response);
-    });
+        res.json({products: data});
+        }
+    },
 
+    displayPdtsCategory: (req,res) => {
+
+    Products.find({category}), (error, data) => {
+        if(error) {
+            res.status(500).json({products: []});
+            return;
+        }
+        res.json({products: data});
+        }
     }
 }
 
-module.exports = myAccount;
+module.exports = catalog;

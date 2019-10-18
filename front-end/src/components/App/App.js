@@ -67,8 +67,10 @@ class App extends Component {
 
     var options = {
       headers: {
-        "X-Requested-With": "XMLHttpRequest"
-      }
+        "X-Requested-With": "XMLHttpRequest",
+        "Content-Type": "application/json"
+      },
+      credentials: "include"
     }
 
     fetch("http://localhost:8080", options)

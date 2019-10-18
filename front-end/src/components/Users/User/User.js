@@ -13,8 +13,57 @@ class User extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      user : {
+        email:'',
+        password:'',
+        message:''
+      }
     }
+  }
+
+  _inputEmail = (event) => {
+    this.setState({email: event.target.value});
+  }
+
+  _inputPassword = (event) => {
+    this.setState({password: event.target.value});
+  }
+
+_inputLogin = () => {
+
+    if(!this.state.email || !this.state.password) {
+        return;
+    }
+
+    var data = {
+        user: {
+            email: this.state.email,
+            password: this.state.password
+        }
+    }
+
+    var options = {
+      method: "POST",
+      headers: {
+        "X-Requested-With": "XMLHttpRequest",
+        "Content-Type": "application/json"
+      },
+      credentials: "include",
+      body: JSON.stringify(data)
+    }
+
+    
+
+    fetch("http://localhost:8080/login", options)
+    .then((res) => (res.json()))
+    .then(
+      (result) => {
+        this.setState({message: result.message});
+      },
+      (error) => {
+        this.setState({message: "Please try again or create a new account."});
+      }
+    )
   }
 
   render() {
@@ -29,14 +78,14 @@ class User extends Component {
                     </div>
                     <form>
                         <div className="input-field col s6">
-                            <input id="email-login" type="email" className="validate" />
+                            <input id="email-login" onChange={this._inputEmail} type="email" className="validate" />
                             <label for="email-login">Email</label>
                         </div>
                         <div className="input-field col s6">
-                            <input id="password-login" type="password" className="validate" />
+                            <input id="password-login" onChange={this._inputPassword} type="password" className="validate" />
                             <label for="password-login">Password</label>
                         </div>
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <button onClick={this._inputLogin} class="btn waves-effect waves-light" type="submit" name="action">Submit
                         </button>
                     </form>
                 </div>
