@@ -7,13 +7,7 @@ var newUser = require('../controllers/users');
 
 /* POST new user in collection Mongo. */
 router.post('/', function(req, res) {
-  var result = newUser.createUser(req);
-  if(result) {
-      res.status(201).end();
-  }
-  else {
-      res.status(418).end();
-  }
+  newUser.createUser(req, res);
 });
 
 module.exports = router;

@@ -6,8 +6,9 @@ var router = express.Router();
 var myAccount = require('../controllers/myAccount');
 
 /* GET display user account. */
-router.get('/myAccount', function(req, res) {
+router.get('/', function(req, res) {
     myAccount.displayMyAccount(req, res);
 });
+
 
 module.exports = router;

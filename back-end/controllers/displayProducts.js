@@ -8,18 +8,18 @@ var catalog = {
 
     displayProducts: (req,res) => {
 
-    Products.find(), (error, data) => {
-        if(error) {
-            res.status(500).json({products: []});
-            return;
-        }
-        res.json({products: data});
-        }
+        Products.find((error, data) => {
+            if(error) {
+                res.status(500).json({products: []});
+                return;
+            }
+            res.json({products: data});
+        });
     },
 
     displayPdtsCategory: (req,res) => {
 
-    Products.find({category}), (error, data) => {
+    Products.find({category:'coding'}), (error, data) => {
         if(error) {
             res.status(500).json({products: []});
             return;

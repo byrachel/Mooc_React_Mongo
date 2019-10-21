@@ -29,23 +29,23 @@ class User extends Component {
     this.setState({password: event.target.value});
   }
 
-_inputLogin = () => {
+_inputLogin = (e) => {
+
+  e.preventDefault();
 
     if(!this.state.email || !this.state.password) {
         return;
     }
 
     var data = {
-        user: {
-            email: this.state.email,
-            password: this.state.password
-        }
+      email: this.state.email,
+      password: this.state.password
     }
 
     var options = {
       method: "POST",
       headers: {
-        "X-Requested-With": "XMLHttpRequest",
+        "X-Requested-With": "XmlHttpRequest",
         "Content-Type": "application/json"
       },
       credentials: "include",

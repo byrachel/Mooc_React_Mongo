@@ -30,7 +30,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      logged: false,
+      logged: '',
       showModal: false
     }
   }
@@ -63,25 +63,27 @@ class App extends Component {
     }
   }
   
-  componentDidMount() {
 
+componentDidMount() {
+    
     var options = {
-      headers: {
-        "X-Requested-With": "XMLHttpRequest",
-        "Content-Type": "application/json"
-      },
-      credentials: "include"
+        method: 'GET',
+        headers: {
+            "X-Requested-With": "XmlHttpRequest",
+            "Content-Type": "application/json"
+        },
+        credentials: "include"
     }
-
-    fetch("http://localhost:8080", options)
-    .then(res => (res.json()))
+    
+    fetch('http://localhost:8080/login', options)
+    .then((res) => (res.json()))
     .then(
-      (result) => {
-        this.setState({message: result.message});
-      },
-      (error) => {
-        console.log(error);
-      }
+        (result) => {
+            this.setState({logged: result});
+        },
+        (error) => {
+            this.setState({logged: false});
+        }
     )
   }
 

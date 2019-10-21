@@ -6,7 +6,7 @@ var router = express.Router();
 var catalog = require('../controllers/displayProducts');
 
 /* GET display products. */
-router.get('/products', function(req, res) {
+router.get('/', function(req, res) {
     catalog.displayProducts(req, res);
 });
 

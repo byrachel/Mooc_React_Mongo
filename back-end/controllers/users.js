@@ -6,7 +6,7 @@ var User = require('../models/Users');
 
 var newUser = {
 
-    createUser: (req) => {
+    createUser: (req, res) => {
         var userData = req.body.user;
         var createNewUser = new User ({
             avatar: null,
@@ -20,17 +20,20 @@ var newUser = {
             friends: []
         }
         );
-        createNewUser.save();
-        return true;
+        createNewUser.save((error) => {
+            if(error) {
+                res.status(500).json({message: "Oups ! "});
+                return;
+            }
+        
+            res.json({message: "Great! Your account is created. Now you can login and start your journey. Have fun..."});
+        });
     },
 
     login: (req, res) => {
-
-        console.log('logged in', req.user);
-        var userInfo = {
-            email: req.user.email
-        };
-        res.send(userInfo);
+        if(req.user) {
+            res.json({logged: true});
+        }
     } 
 }
 

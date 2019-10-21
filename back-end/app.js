@@ -17,6 +17,7 @@ var indexRouter = require('./routes/index');
 var newUserRouter = require('./routes/users');
 var myAccountRouter = require('./routes/myAccount');
 var loginRouter = require('./routes/login');
+var productsRouter = require('./routes/products');
 
 /* Create app */
 var app = express();
@@ -68,5 +69,6 @@ app.use('/', indexRouter);
 app.use('/users', newUserRouter);
 app.use('/myAccount', myAccountRouter);
 app.use('/login', loginRouter);
+app.use('/products', productsRouter);
 
 module.exports = app;

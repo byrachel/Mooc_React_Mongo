@@ -50,21 +50,23 @@ class CreateAccount extends Component {
             this.setState({message: result.message});
         },
         (error) => {
-            this.setState({message: "Une erreur s'est produite."});
+            this.setState({message: "Oups. Please try again."});
         }
     )
   }
 
   render() {
     return (
-        <div className="row">
-            <div className="fluid col s12 silver-block">
+        <div>
+
+            <div className="ruban">
                 <h2 className="title-uppercase-grey center">Welcome</h2>
                 <h3 className="subtitle-turquoise center">The first step to level-up your life.</h3>
             </div>
 
             <div className="container">
                 <div className="row">
+                <h3 className="subtitle-pink center">{this.state.message}</h3>
                     <form>
                         <div className="input-field col s6">
                             <input onChange={(event) => {this.setState({firstname:event.target.value})}} id="firstname" type="text" className="validate" required/>
@@ -85,6 +87,7 @@ class CreateAccount extends Component {
                         </div>
                         <button onClick={this._createAccount} class="btn waves-effect waves-light" type="submit" name="action">Submit
                         </button>
+                        
                     </form>
                 </div>
             </div>
