@@ -5,7 +5,7 @@ import 'materialize-css/dist/js/materialize.min.js';
 /* Styles imports */
 import './App.css';
 import 'materialize-css/dist/css/materialize.min.css';
-import MaterialIcon, {colorPalette} from 'material-icons-react';
+import MaterialIcon from 'material-icons-react';
 
 /* Gestionnaire de pages - imports */
 import {
@@ -15,14 +15,12 @@ import {
   Link
 } from "react-router-dom";
 
-
 /* Component imports */
 import MyAccount from '../Users/MyAccount/MyAccount';
 import CoursesList from '../Courses/CoursesList/CoursesList';
 import User from '../Users/User/User';
 import CreateAccount from '../Users/CreateAccount/CreateAccount';
 import Home from '../Home/Home';
-
 
 /* App component */
 class App extends Component {
@@ -32,15 +30,6 @@ class App extends Component {
     this.state = {
       logged: '',
       showModal: false
-    }
-  }
-
-  _loginMenu = () => {
-    if(this.state.logged) {
-      return (<Link to="/MyAccount/MyAccount" className="nav-link right-align">My Account</Link>);
-    }
-    else {
-      return (<a className="nav-link right-align" onClick={this._toggleModal}>Sign in</a>);
     }
   }
 
@@ -63,29 +52,37 @@ class App extends Component {
     }
   }
   
-
-componentDidMount() {
+  componentDidMount() {
+    
+    var options = {
+        method: 'GET',
+        headers: {
+            "X-Requested-With": "XmlHttpRequest",
+            "Content-Type": "application/json"
+        },
+        credentials: "include"
+    }
+    
+    fetch('http://localhost:8080/checkLogin', options)
+    .then((res) => (res.json()))
+    .then(
+        (result) => {
+           this.setState({logged: result});
+        },
+        (error) => {
+           this.setState({logged: false});
+        }
+    )
+  }
     
-    var options = {
-        method: 'GET',
-        headers: {
-            "X-Requested-With": "XmlHttpRequest",
-            "Content-Type": "application/json"
-        },
-        credentials: "include"
+    _loginMenu = () => {
+      if(this.state.logged) {
+        return (<Link to="/MyAccount/MyAccount" className="nav-link right-align">My Account</Link>);
+      }
+      else {
+        return (<a className="nav-link right-align" onClick={this._toggleModal}>Sign in</a>);
+      }
     }
-    
-    fetch('http://localhost:8080/login', options)
-    .then((res) => (res.json()))
-    .then(
-        (result) => {
-            this.setState({logged: result});
-        },
-        (error) => {
-            this.setState({logged: false});
-        }
-    )
-  }
 
   render() {
     return (
@@ -95,7 +92,7 @@ componentDidMount() {
             <header>
               <nav className="z-depth-0">
                 <div className="nav-wrapper">
-                <Link to="/Home/Home"><img Alt="Logo Level.up" src="/img/logo-levelup-2019.png" className="brand-logo"></img></Link>
+                <Link to="/Home/Home"><img alt="Logo Level.up" src="/img/logo-levelup-2019.png" className="brand-logo"></img></Link>
                   <ul className="right">
                     <li><MaterialIcon icon="search" color='#000000' /></li>
                     <li><Link to="/CoursesList/CoursesList" className="nav-link right-align">Courses</Link></li>
@@ -108,7 +105,6 @@ componentDidMount() {
           </div>
 
           {this._displayModal()}
-
 
           {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}

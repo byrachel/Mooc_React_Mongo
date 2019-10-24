@@ -51,8 +51,8 @@ class CoursesList extends Component {
         <div className="col s12 m4">
           <div className="card hoverable">
             <div className="card-image">
-              <img className="size-img" src={pdt.img}></img>
-              <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">shopping_cart</i></a>
+              <img className="size-img" alt="formation" src={pdt.img}></img>
+              <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i className="material-icons">shopping_cart</i></a>
             </div>
             <div className="card-content">
               <span className="card-title">{pdt.title}</span>

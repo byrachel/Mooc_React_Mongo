@@ -18,6 +18,8 @@ var newUserRouter = require('./routes/users');
 var myAccountRouter = require('./routes/myAccount');
 var loginRouter = require('./routes/login');
 var productsRouter = require('./routes/products');
+var checkLoginRouter = require('./routes/checkLogin');
+var logoutRouter = require('./routes/logout');
 
 /* Create app */
 var app = express();
@@ -70,5 +72,7 @@ app.use('/users', newUserRouter);
 app.use('/myAccount', myAccountRouter);
 app.use('/login', loginRouter);
 app.use('/products', productsRouter);
+app.use('/checkLogin', checkLoginRouter);
+app.use('/logout', logoutRouter);
 
 module.exports = app;

@@ -25,16 +25,11 @@ var newUser = {
                 res.status(500).json({message: "Oups ! "});
                 return;
             }
-        
             res.json({message: "Great! Your account is created. Now you can login and start your journey. Have fun..."});
         });
     },
 
-    login: (req, res) => {
-        if(req.user) {
-            res.json({logged: true});
-        }
-    } 
+
 }
 
 module.exports = newUser;

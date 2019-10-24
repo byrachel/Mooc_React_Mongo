@@ -13,7 +13,6 @@ passport.serializeUser((user, done) => {
 passport.deserializeUser((id, done) => {
 	User.findOne(
 		{ _id: id },
-		'email', //identifiant
 		(err, user) => {
 			done(null, user);
 		}
